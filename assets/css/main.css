@@ -2454,7 +2454,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: white;
+			border-color: black;
 			color: white !important;
 		}
 
