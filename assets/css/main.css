@@ -3255,3 +3255,7 @@ input, select, textarea {
 	border-radius: 10px;
 	font-size: 80%;
 }
+
+.pageNav{
+	margin: 0px 5px 0px 0px;
+}
