@@ -1,15 +1,25 @@
+<!--Get the samples from https://www.adobe.com/go/pdfembedapi_samples-->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Resume</title>
+ <title>Adobe Acrobat Services PDF Embed API Sample</title>
+ <meta charset="utf-8"/>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+ <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
-<body>
-    <center>
-        <iframe src=
-                "Andrew Garcia Resume A-6.pdf" 
-                width="auto"
-                height="auto">
-        </iframe>
-    </center>
+<body style="margin: 0 px">
+ <div id="adobe-dc-view"></div>
+ <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+ <script type="text/javascript">
+    document.addEventListener("adobe_dc_view_sdk.ready",function() 
+    {
+        var adobeDCView = new AdobeDC.View({clientId: "54ec0876dcf6443ebf318ece44020d46", divId: "adobe-dc-view"});
+        adobeDCView.previewFile(
+       {
+          content:   {location: {url: "https://acrobatservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf"}},
+          metaData: {fileName: "Bodea Brochure.pdf"}
+       });
+    });
+ </script>
 </body>
 </html>
